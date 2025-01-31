@@ -1,9 +1,8 @@
-
 [
   {
     "kind": "column",
-    "name": "OpenAI (Assistants)",
-    "description": "Create, modify and run OpenAI Assistants.",
+    "name": "List OpenAI Vector Store Batch Files",
+    "description": "Retrieve all files from a specific file batch in OpenAI's API, with optional pagination and filtering controls.",
     "author": "Gavin Horne <gavin@thinknetwork.com.au>",
     "params": [
       {
@@ -12,18 +11,38 @@
         "type": "string"
       },
       {
-        "name": "endpoint",
-        "displayName": "API Endpoint (Required)",
+        "name": "vector_store_id",
+        "displayName": "Vector Store ID (Required)",
         "type": "string"
       },
       {
-        "name": "body",
-        "displayName": "Body (JSON Schema Required)",
+        "name": "batch_id",
+        "displayName": "File Batch ID (Required)",
         "type": "string"
       },
       {
-        "name": "json",
-        "displayName": "JSON Schema (Output)",
+        "name": "limit",
+        "displayName": "Limit (Optional, Number of results)",
+        "type": "number"
+      },
+      {
+        "name": "order",
+        "displayName": "Order (asc/desc, Optional)",
+        "type": "string"
+      },
+      {
+        "name": "after",
+        "displayName": "After File ID (Optional, for pagination)",
+        "type": "string"
+      },
+      {
+        "name": "before",
+        "displayName": "Before File ID (Optional, for pagination)",
+        "type": "string"
+      },
+      {
+        "name": "filter",
+        "displayName": "Filter (Optional, JSON format)",
         "type": "string"
       }
     ],
